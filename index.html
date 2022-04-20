@@ -28,7 +28,25 @@
         <a class="link logo logo--dark" href="./"
           ><span class="logo__text">Web</span>Studio</a
         >
-
+        <!-- Кнопка бургер-меню -->
+        <button
+          class="btn-menu is-active"
+          type="button"
+          aria-label="Кнопка меню"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg class="btn-menu__icon" width="40" height="40">
+            <use
+              class="btn-menu__open"
+              href="images/icon/symbol-defs.svg#menu-open"
+            ></use>
+            <use
+              class="btn-menu__close"
+              href="images/icon/symbol-defs.svg#menu-close"
+            ></use>
+          </svg>
+        </button>
         <!-- Навигация-->
         <nav class="nav header__nav">
           <ul class="list nav__list">
@@ -72,7 +90,7 @@
 
     <main>
       <!--Герой-->
-      <section class="hero">
+      <!-- <section class="hero">
         <div class="conteiner hero__conteiner">
           <h1 class="hero__title">
             Эффективные решения <br />
@@ -82,10 +100,10 @@
             Заказать услугу
           </button>
         </div>
-      </section>
+      </section> -->
 
       <!-- Особенности -->
-      <section class="particular">
+      <!-- <section class="particular">
         <div class="conteiner particular__conteiner">
           <h2 class="particular__title particular__title--visually-hidden">
             Наши особенности
@@ -125,10 +143,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- О нас-->
-      <section class="about">
+      <!-- <section class="about">
         <div class="conteiner about__conteiner">
           <h2 class="about__title">Чем мы занимаемся</h2>
           <ul class="list about__list">
@@ -167,10 +185,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!-- Наша команда-->
-      <section class="team">
+      <!-- <section class="team">
         <div class="conteiner team__conteiner">
           <h2 class="team__title">Наша команда</h2>
           <ul class="list team__list">
@@ -376,9 +394,9 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- Клиенты -->
-      <section class="clients">
+      <!-- <section class="clients">
         <div class="conteiner clients__conteiner">
           <h2 class="clients__title">Постоянные клиенты</h2>
           <ul class="clients__list">
@@ -428,10 +446,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- Footer-->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="conteiner footer-conteiner">
         <div class="address-conteiner">
           <a class="logo__link link" href="./">
@@ -519,7 +537,7 @@
           </div>
         </form>
       </div>
-    </footer>
+    </footer> -->
     <!-- Модальное окно -->
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
@@ -610,8 +628,71 @@
       </div>
     </div>
 
+    <!-- Мобильное меню -->
+    <div class="mobile-overlay is-open" data-menu>
+      <div class="mobile-menu is-open">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav__list list">
+            <li class="mobile-nav__item">
+              <a href="" class="mobile-nav__link link">Студия</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="" class="mobile-nav__link link">Портфолио</a>
+            </li>
+            <li class="mobile-nav__item">
+              <a href="" class="mobile-nav__link link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="mobile-contacts">
+          <ul class="mobile-conacts__list list">
+            <li class="mobile-contacts__item">
+              <a
+                href="tel:+380961111111"
+                class="mobile-contacts__link mobile-contacts__link--hover link"
+                >+38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mail:info@devstudio.com"
+                class="mobile-contacts__link mobile-contacts__link--hover link"
+                >info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+        <ul class="mobile-socials__list list">
+          <li class="mobile-socials__item">
+            <a
+              href=""
+              class="mobile-socials__link mobile-socials__link--after link"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              href=""
+              class="mobile-socials__link mobile-socials__link--after link"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a
+              href=""
+              class="mobile-socials__link mobile-socials__link--after link"
+              >Facebook</a
+            >
+          </li>
+          <li class="mobile-socials__item">
+            <a href="" class="mobile-socials__link link">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- Скрипт для модалки -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
 
     <!-- Скрипт для формы -->
     <script>

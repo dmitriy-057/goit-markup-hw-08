@@ -1,0 +1,81 @@
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    background-color: #fff;
+    background-color: #fff;
+    box-shadow: 0px 1px 3px 0px #00000029, 0px 2px 4px 0px #00000014,
+      0px 4px 8px 0px #0000000a;
+  }
+}
+// Стили к мобильное меню
+.mobile-menu {
+  width: 100%;
+  height: 100%;
+  padding: 48px 0 48px 40px;
+
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 250ms $timing-formating;
+
+  &.is-open {
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: initial;
+  }
+}
+// моб навигация
+.mobile-nav {
+  margin-bottom: 306px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    color: #212121;
+    @include fonts($fs: 40px, $fw: 500, $lh: 1.17);
+    transition: color 250ms $timing-formating;
+    &:hover {
+      color: $hover-color;
+    }
+  }
+}
+.mobile-contacts {
+  margin-bottom: 64px;
+
+  &__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &__link {
+    color: $secondary-color;
+    @include fonts($fs: 24px, $fw: 500, $lh: 1.16);
+    transition: color 250ms $timing-formating, font-size 250ms $timing-formating;
+
+    &:hover {
+      color: $hover-color;
+      @include fonts($fs: 34px);
+    }
+  }
+}
+.mobile-socials__list {
+  display: flex;
+}
+.mobile-socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+.mobile-socials__link {
+  color: $hover-color;
+  @include fonts($fs: 18px, $fw: 500, $lh: 1.2);
+}
+.mobile-socials__link--after::after {
+  content: "";
+  width: 1px;
+  margin-left: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
