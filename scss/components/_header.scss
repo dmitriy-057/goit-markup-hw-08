@@ -1,0 +1,102 @@
+/* Хедер */
+.header {
+  background-color: #ffffff;
+}
+.header__conteiner {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+}
+
+.nav__list {
+  display: flex;
+}
+.header__list {
+  margin-left: auto;
+}
+/* Текст лого */
+.logo__text {
+  color: #2196f3;
+}
+.logo {
+  margin-right: 93px;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  font-family: $secondary-font;
+  @include fonts(26px, 700, 1.2em);
+
+  &.logo--dark {
+    color: #000;
+  }
+}
+/* Навигация */
+.nav__link {
+  color: inherit;
+  @include fonts(14px, 500, 1.14em);
+  padding: 32px 0;
+  transition: color 250ms $timing-formating;
+
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+
+  &.nav__link--current {
+    position: relative;
+    color: $hover-color;
+
+    /* Синее подчеркивание */
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $hover-color;
+      border-radius: 2px;
+      opacity: 1;
+    }
+  }
+}
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* контакты */
+.header__list {
+  display: flex;
+  align-items: center;
+}
+.header__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.header__contacts {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.14;
+  color: $secondary-color;
+  text-decoration: none;
+  padding: 31px 0 32px;
+  transition: color 250ms $timing-formating;
+
+  .header__item:hover &,
+  .header__item:focus & {
+    color: $hover-color;
+  }
+}
+
+.contacts-icon-email {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+.contacts-icon-phone {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: currentColor;
+}

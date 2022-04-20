@@ -1,0 +1,29 @@
+// variebles
+@import "./variebles/variebles";
+
+// utils
+@import "./utils/utils";
+@import "./utils/_visually-hidden";
+@import "./utils/social-pages";
+@import "./base/base";
+
+// components
+@import "./components/container";
+@import "./components/buttons";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/particular";
+@import "./components/about-us";
+@import "./components/our-team";
+@import "./components/clients";
+@import "./components/footer";
+@import "./components/form/footer-form";
+@import "./components/form/module";
+@import "./components/form/form";
+@import "./components/form/input";
+@import "./components/form/checkbox";
+@import "./components/form/comment";
+@import "./components/portfolio/portfolio-buttons";
+@import "./components/portfolio/portfolio";
+@import "./components/portfolio/projects";
+@import "./components/portfolio/overlay";

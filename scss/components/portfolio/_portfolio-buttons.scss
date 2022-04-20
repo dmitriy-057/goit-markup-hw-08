@@ -1,0 +1,31 @@
+/* Кнопки */
+.portfolio__buttons-list {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio__buttons-item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio__buttons {
+  font-style: var(--main-font);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.6;
+  background-color: #f5f4fa;
+  color: var(--main-color);
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 0px;
+  transition: background-color 250ms var(--timing-formating),
+    color 250ms var(--timing-formating),
+    box-shadow 250ms var(--timing-formating);
+
+  &:hover,
+  &:focus {
+    background-color: $hover-color;
+    color: #fff;
+    box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014,
+      0px 3px 1px 0px #0000001a;
+  }
+}

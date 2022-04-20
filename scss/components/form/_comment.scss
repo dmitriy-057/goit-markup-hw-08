@@ -1,0 +1,27 @@
+/* Комментарий */
+.form-comment {
+  display: block;
+  margin-bottom: 20px;
+}
+.form-comment__label {
+  color: $secondary-color;
+  margin-bottom: 4px;
+}
+.form-comment__textarea {
+  display: block;
+  resize: none;
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: outline 250ms $timing-formating;
+
+  &:not(:placeholder-shown) {
+    border: 1px solid $hover-color;
+  }
+  .form-comment:focus-within & {
+    outline: 1px solid $hover-color;
+  }
+}

@@ -1,0 +1,87 @@
+/* Футер */
+
+.footer {
+  background-color: $third-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer-conteiner {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo__link {
+  display: inline-block;
+  font-family: $secondary-font;
+  color: #fff;
+  @include fonts($fs: 26px, $fw: 700, $lh: 1.2, $ls: null);
+  width: 145px;
+  margin-bottom: 20px;
+}
+.address {
+  font-style: normal;
+  width: 231px;
+}
+
+.address__location {
+  display: inline-block;
+  @include fonts($fw: null, $lh: 1.7, $ls: null);
+  color: #ffffff;
+}
+.address__contacts {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 250ms $timing-formating;
+
+  & :hover,
+  & :focus {
+    color: $hover-color;
+  }
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+/* Присоединяйтесь */
+.footer-icons {
+  margin-left: 70px;
+}
+.footer-icons__title {
+  text-transform: uppercase;
+  @include fonts($fw: null, $lh: 1.17, $ls: null);
+  color: #ffffff;
+}
+.footer-icons__list {
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+}
+.footer-icons__item {
+  margin-right: 10px;
+  text-align: center;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.footer-icons__link {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms $timing-formating;
+
+  .footer-icons__item:hover &,
+  .footer-icons__item:focus & {
+    background-color: $hover-color;
+  }
+}
+.footer-icons__card {
+  fill: #ffffff;
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,46 @@
+/* Клиенты */
+.clients {
+  padding-top: $main-padding;
+  padding-bottom: $main-padding;
+}
+.clients__title {
+  @include fonts($fs: 36px, $fw: 700, $lh: 1.16, $ls: null);
+  text-align: center;
+}
+.clients__list {
+  margin-top: 50px;
+  list-style: none;
+  display: flex;
+}
+.clients__item {
+  margin-right: $main-li-margin;
+  flex-basis: calc(100% - 5 * $main-li-margin / 6);
+  &:last-child {
+    margin-right: 0px;
+  }
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
+  fill: #afb1b8;
+  transition: fill 250ms $timing-formating, border 250ms $timing-formating;
+
+  .clients__item:hover &,
+  .clients__item:focus & {
+    fill: $hover-color;
+    border: 1px solid $hover-color;
+  }
+}
+.clients__link-card {
+  width: 106px;
+  height: 60px;
+}
