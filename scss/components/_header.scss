@@ -84,6 +84,7 @@
 }
 .header__item:not(:last-child) {
   margin-right: 50px;
+
   @media screen and (max-width: 1200px) {
     margin-right: 0;
   }
@@ -103,6 +104,10 @@
   .header__item:hover &,
   .header__item:focus & {
     color: $hover-color;
+  }
+  @media screen and (max-width: 1200px) {
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 }
 
