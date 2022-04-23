@@ -3,6 +3,12 @@
   width: 570px;
   height: 86px;
   margin-left: 70px;
+  @media (max-width: 480px) {
+    margin-left: 0;
+  }
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 
 .footer-form__text {
@@ -10,11 +16,33 @@
   @include fonts($fw: 700, $lh: 1.14, $ls: null);
   color: #ffffff;
   margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+  @media (min-width: 767px) and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 .footer-form__conteiner {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 480px) {
+    display: block;
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    display: block;
+    text-align: center;
+  }
+  @media (min-width: 767px) and (max-width: 1199px) {
+    display: block;
+    text-align: center;
+  }
 }
 .footer-form__label {
   margin-right: 12px;
@@ -28,6 +56,19 @@
   border-radius: 4px;
   padding: 15px 0 15px 16px;
   color: rgba(255, 255, 255, 0.6);
+
+  @media (max-width: 480px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 767px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 767px) and (max-width: 1199px) {
+    width: 450px;
+    margin-bottom: 20px;
+  }
 }
 
 .btn-sign {
@@ -41,6 +82,19 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (max-width: 767px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 767px) and (max-width: 1199px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .btn-sign__icon {
   width: 24px;

@@ -15,6 +15,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  // @media screen and (min-width: 480px) and (max-width: 767px) {
+  //   width: 480px;
+  // }
+  // @media screen and (min-width: 768px) and (max-width: 1199px) {
+  //   width: 768px;
+  // }
 }
 
 .hero__title {
@@ -29,6 +36,14 @@
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (max-width: 1199px) {
+    width: 360px;
+    @include fonts($fs: 26px, $fw: 900px, $lh: 1.6, $ls: 00.06em);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 }
 
 .hero__button {

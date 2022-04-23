@@ -2,24 +2,81 @@
 .clients {
   padding-top: $main-padding;
   padding-bottom: $main-padding;
+
+  @media screen and (max-width: 1199px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 .clients__title {
-  @include fonts($fs: 36px, $fw: 700, $lh: 1.16, $ls: null);
+  @include fonts($fs: 36px, $fw: 700, $lh: 1.16);
   text-align: center;
+  margin-bottom: 50px;
+
+  @media (max-width: 1199px) {
+    @include fonts($fs: 28px, $fw: 700, $lh: 1.17);
+    margin-bottom: 30px;
+  }
 }
 .clients__list {
-  margin-top: 50px;
-  list-style: none;
   display: flex;
+
+  @media (max-width: 480px) {
+    flex-wrap: wrap;
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 .clients__item {
   margin-right: $main-li-margin;
   flex-basis: calc(100% - 5 * $main-li-margin / 6);
+
+  @media (max-width: 480px) {
+    width: 150px;
+    flex-basis: calc((100% - 10px) / 2);
+  }
+  @media (max-width: 767px) {
+    width: 210px;
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    width: 226px;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+  }
   &:last-child {
     margin-right: 0px;
   }
 }
-
+.clients__item:nth-child(2n) {
+  @media (max-width: 480px) {
+    margin-right: 0;
+  }
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
+}
+.clients__item:nth-child(3n) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 0;
+  }
+}
+.clients__item:nth-last-child(n + 2) {
+  @media (max-width: 480px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
+}
+.clients__item:nth-last-child(n + 4) {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+}
 .clients__link {
   display: flex;
   justify-content: center;
@@ -38,6 +95,22 @@
   .clients__item:focus & {
     fill: $hover-color;
     border: 1px solid $hover-color;
+  }
+
+  @media (max-width: 480px) {
+    width: 200px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: 767px) {
+    width: 210px;
+    padding-left: 52px;
+    padding-right: 52px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    width: 226px;
+    padding-left: 60px;
+    padding-right: 60px;
   }
 }
 .clients__link-card {

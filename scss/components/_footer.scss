@@ -8,8 +8,29 @@
 .footer-conteiner {
   display: flex;
   align-items: baseline;
-}
 
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+}
+.address-conteiner {
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
 .logo__link {
   display: inline-block;
   font-family: $secondary-font;
@@ -17,16 +38,48 @@
   @include fonts($fs: 26px, $fw: 700, $lh: 1.2, $ls: null);
   width: 145px;
   margin-bottom: 20px;
+
+  @media (max-width: 480px) {
+    width: 154px;
+  }
+  @media (max-width: 767px) {
+    width: 154px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    width: 154px;
+  }
 }
 .address {
   font-style: normal;
   width: 231px;
+
+  @media (max-width: 480px) {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 767px) {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
 }
 
 .address__location {
   display: inline-block;
   @include fonts($fw: null, $lh: 1.7, $ls: null);
   color: #ffffff;
+  @media (max-width: 480px) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  @media (max-width: 767px) {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+  }
 }
 .address__contacts {
   display: inline-block;
@@ -45,11 +98,33 @@
 /* Присоединяйтесь */
 .footer-icons {
   margin-left: 70px;
+  @media (max-width: 480px) {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
+  @media (max-width: 767px) {
+    margin-left: 0;
+    margin-bottom: 60px;
+  }
 }
 .footer-icons__title {
   text-transform: uppercase;
   @include fonts($fw: null, $lh: 1.17, $ls: null);
   color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-align: center;
+
+  @media (max-width: 480px) {
+    @include fonts($fs: 14px, $fw: 700, $lh: 1.14);
+    text-align: center;
+  }
+  @media (max-width: 767px) {
+    @include fonts($fs: 14px, $fw: 700, $lh: 1.14);
+    text-align: center;
+  }
 }
 .footer-icons__list {
   margin-top: 20px;
@@ -84,4 +159,13 @@
   fill: #ffffff;
   width: 20px;
   height: 20px;
+}
+// Футер для таблетки
+.footer__tablet-conteiner {
+  @media (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
 }
