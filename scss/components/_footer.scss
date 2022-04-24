@@ -1,5 +1,4 @@
 /* Футер */
-
 .footer {
   background-color: $third-background-color;
   padding-top: 60px;
@@ -20,9 +19,11 @@
     justify-content: center;
   }
   @media (min-width: 768px) and (max-width: 1199px) {
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
+
 .address-conteiner {
   @media (max-width: 480px) {
     text-align: center;
@@ -62,6 +63,10 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 60px;
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    margin-bottom: 60px;
+    height: 100%;
   }
 }
 
@@ -159,13 +164,4 @@
   fill: #ffffff;
   width: 20px;
   height: 20px;
-}
-// Футер для таблетки
-.footer__tablet-conteiner {
-  @media (min-width: 768px) and (max-width: 1199px) {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-  }
 }
