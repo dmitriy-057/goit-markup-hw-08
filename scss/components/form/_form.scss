@@ -15,6 +15,22 @@
 .form__group {
   display: block;
   margin-bottom: 10px;
+
+  @media (max-width: 480px) {
+    width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) and (maax-width: 1199px) {
+    width: 370px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .form__label {
