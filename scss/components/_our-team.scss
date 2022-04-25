@@ -2,12 +2,12 @@
 
 .team {
   background-color: #f5f4fa;
-  padding-top: $main-padding;
-  padding-bottom: $main-padding;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-  @media screen and (max-width: 1199px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: $main-padding;
+    padding-bottom: $main-padding;
   }
 }
 .team__title {
@@ -21,50 +21,32 @@
   }
 }
 .team__list {
-  display: flex;
-
-  @media screen and (max-width: 480px) {
-    display: block;
-  }
-  @media screen and (max-width: 767px) {
-    display: block;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  display: block;
+  @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
   }
 }
 .own-card {
+  margin-bottom: 30px;
   background-color: $secondary-background-color;
   border-radius: 4px;
   transition: box-shadow 250ms $timing-formating;
-  margin-right: $main-li-margin;
-  flex-basis: calc((100% - 3 * $main-li-margin) / 4);
-  @media screen and (max-width: 480px) {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 30px;
-  }
-  @media screen and (min-width: 481px) and (max-width: 767px) {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 30px;
-  }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-    width: 354px;
-    margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 30px;
     flex-basis: calc((100% - 30px) / 2);
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 0;
+    margin-right: $main-li-margin;
+    flex-basis: calc((100% - 3 * $main-li-margin) / 4);
   }
 
   &:last-child {
-    margin-right: 0px;
-    @media screen and (max-width: 480px) {
-      margin-bottom: 0;
-    }
-    @media screen and (min-width: 481px) and (max-width: 767px) {
-      margin-bottom: 0;
+    margin-bottom: 0;
+    @media (min-width: 1200px) {
+      margin-right: 0;
     }
   }
   &:hover {
@@ -84,55 +66,26 @@
   }
 }
 
-.own__photo {
-  width: 270px;
-  @media screen and (max-width: 480px) {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  @media screen and (max-width: 768px) {
-    width: 450px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  @media screen and (min-width: 769px) and (max-width: 1199px) {
-    width: 354px;
-  }
-}
 .own__name {
   @include fonts($fs: 16px, $lh: 1.19);
   text-align: center;
   margin-bottom: 10px;
 }
 .own__text {
-  @include fonts($fw: 500, $fs: 16px, $lh: 1.17);
+  @include fonts($fw: 400, $fs: 16px, $lh: 1.17);
   color: $secondary-color;
   text-align: center;
-
-  @media screen and (max-width: 480px) {
-    @include fonts($fw: 400, $fs: 16px, $lh: 1.17);
-  }
-  @media screen and (min-width: 481px) and (max-width: 768px) {
-    @include fonts($fw: 400, $fs: 16px, $lh: 1.17);
+  @media (min-width: 1200px) {
+    @include fonts($fw: 500, $fs: 16px, $lh: 1.17);
   }
 }
 .own__conteiner {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 16px;
+  padding-bottom: 24px;
 
-  @media screen and (max-width: 480px) {
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 16px;
-    padding-bottom: 24px;
-  }
-  @media screen and (max-width: 768px) {
-    margin-right: auto;
-    margin-left: auto;
-    padding-top: 16px;
-    padding-bottom: 24px;
+  @media (min-width: 1200px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 .socials-pages {

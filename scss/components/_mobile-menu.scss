@@ -18,10 +18,8 @@
     visibility: visible;
     pointer-events: initial;
   }
-
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    width: 480px;
-    background-color: #fff;
+  @media (max-width: 767px) {
+    width: 100%;
     background-color: #fff;
     box-shadow: 0px 1px 3px 0px #00000029, 0px 2px 4px 0px #00000014,
       0px 4px 8px 0px #0000000a;
@@ -46,6 +44,9 @@
       color: $hover-color;
     }
   }
+}
+.mobile-nav__link--current {
+  color: $hover-color;
 }
 .mobile-contacts {
   margin-bottom: 64px;

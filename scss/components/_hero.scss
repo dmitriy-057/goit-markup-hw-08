@@ -1,12 +1,13 @@
 /* Герой */
 .hero {
-  background-color: $third-background-color;
+  height: 400px;
   max-width: 1600px;
-  height: 600px;
-  padding-bottom: 200px;
-  padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  text-align: center;
+  background-color: $third-background-color;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(48, 48, 58, 0.4)
@@ -15,36 +16,43 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    height: 600px;
+  }
 }
 
 .hero__title {
-  width: 696px;
-  font-size: 44px;
+  display: block;
+  max-width: 360px;
+  font-size: 26px;
   font-weight: 900;
-  line-height: 1.36;
+  line-height: 1.62;
   letter-spacing: 0.06em;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  margin-bottom: 30px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
 
-  @media screen and (max-width: 1199px) {
-    width: 360px;
-    @include fonts($fs: 26px, $fw: 900px, $lh: 1.6, $ls: 00.06em);
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+  @media screen and (min-width: 1200px) {
+    max-width: 700px;
+    font-size: 44px;
+    line-height: 1.36;
   }
 }
 
 .hero__button {
-  display: block;
+  display: inline-block;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.8;
+  line-height: 1.87;
   letter-spacing: 0.06em;
   text-align: center;
   color: #ffffff;
