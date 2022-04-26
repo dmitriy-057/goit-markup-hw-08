@@ -1,9 +1,15 @@
 /* Кнопки */
 .portfolio__buttons-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
 }
-
+.portfolio__buttons-item {
+  margin-bottom: 15px;
+}
 .portfolio__buttons-item:not(:last-child) {
   margin-right: 8px;
 }
