@@ -5,86 +5,50 @@
   padding-bottom: 60px;
 }
 .footer-conteiner {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
 
-  @media (max-width: 480px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @media (max-width: 767px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: baseline;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
   }
 }
 
 .address-conteiner {
-  @media (max-width: 480px) {
-    text-align: center;
+  @media (min-width: 768px) {
+    margin-right: 165px;
   }
-  @media (max-width: 767px) {
-    text-align: center;
+  @media screen and (max-width: 1199px) {
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    flex-grow: 1;
   }
 }
 .logo__link {
   display: inline-block;
   font-family: $secondary-font;
   color: #fff;
-  @include fonts($fs: 26px, $fw: 700, $lh: 1.2, $ls: null);
-  width: 145px;
+  @include fonts($fs: 26px, $fw: 700, $lh: 1.2);
   margin-bottom: 20px;
-
-  @media (max-width: 480px) {
-    width: 154px;
-  }
-  @media (max-width: 767px) {
-    width: 154px;
-  }
-  @media (min-width: 768px) and (max-width: 1199px) {
-    width: 154px;
-  }
 }
 .address {
   font-style: normal;
-  width: 231px;
-
-  @media (max-width: 480px) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-  }
-  @media (max-width: 767px) {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-  }
-  @media (min-width: 768px) and (max-width: 1199px) {
-    margin-bottom: 60px;
-    height: 100%;
-  }
 }
 
 .address__location {
   display: inline-block;
-  @include fonts($fw: null, $lh: 1.7, $ls: null);
   color: #ffffff;
-  @media (max-width: 480px) {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-
-  @media (max-width: 767px) {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-  }
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .address__contacts {
   display: inline-block;
@@ -102,39 +66,30 @@
 
 /* Присоединяйтесь */
 .footer-icons {
-  margin-left: 70px;
-  @media (max-width: 480px) {
-    margin-left: 0;
-    margin-bottom: 60px;
+  margin-left: 0;
+  margin-bottom: 60px;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
   }
-  @media (max-width: 767px) {
-    margin-left: 0;
-    margin-bottom: 60px;
+  @media (min-width: 1200px) {
+    margin-right: 93px;
   }
 }
 .footer-icons__title {
   text-transform: uppercase;
-  @include fonts($fw: null, $lh: 1.17, $ls: null);
+  @include fonts($fs: 14px, $fw: 700, $lh: 1.14);
+  margin-bottom: 20px;
   color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.03em;
   text-align: center;
 
-  @media (max-width: 480px) {
-    @include fonts($fs: 14px, $fw: 700, $lh: 1.14);
-    text-align: center;
-  }
-  @media (max-width: 767px) {
-    @include fonts($fs: 14px, $fw: 700, $lh: 1.14);
-    text-align: center;
+  @media (min-width: 1200px) {
+    @include fonts($fw: null, $lh: 1.17);
   }
 }
 .footer-icons__list {
-  margin-top: 20px;
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .footer-icons__item {
   margin-right: 10px;

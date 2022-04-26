@@ -732,38 +732,36 @@ body {
 }
 
 .footer-conteiner {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
 }
-@media (max-width: 480px) {
+@media screen and (min-width: 768px) {
   .footer-conteiner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media (max-width: 767px) {
-  .footer-conteiner {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .footer-conteiner {
+    display: flex;
+    align-items: baseline;
     justify-content: center;
     flex-wrap: wrap;
   }
 }
-
-@media (max-width: 480px) {
-  .address-conteiner {
-    text-align: center;
+@media screen and (min-width: 1200px) {
+  .footer-conteiner {
+    justify-content: space-between;
   }
 }
-@media (max-width: 767px) {
+
+@media (min-width: 768px) {
   .address-conteiner {
-    text-align: center;
+    margin-right: 165px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .address-conteiner {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address-conteiner {
+    margin-right: 70px;
+    flex-grow: 1;
   }
 }
 
@@ -774,69 +772,20 @@ body {
   font-size: 26px;
   font-weight: 700;
   line-height: 1.2;
-  width: 145px;
+  letter-spacing: 0.02em;
   margin-bottom: 20px;
-}
-@media (max-width: 480px) {
-  .logo__link {
-    width: 154px;
-  }
-}
-@media (max-width: 767px) {
-  .logo__link {
-    width: 154px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .logo__link {
-    width: 154px;
-  }
 }
 
 .address {
   font-style: normal;
-  width: 231px;
-}
-@media (max-width: 480px) {
-  .address {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-  }
-}
-@media (max-width: 767px) {
-  .address {
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 60px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1199px) {
-  .address {
-    margin-bottom: 60px;
-    height: 100%;
-  }
 }
 
 .address__location {
   display: inline-block;
-  font-size: 14px;
-  line-height: 1.7;
   color: #ffffff;
-}
-@media (max-width: 480px) {
-  .address__location {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-  }
-}
-@media (max-width: 767px) {
-  .address__location {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px;
-  }
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
 }
 
 .address__contacts {
@@ -854,55 +803,42 @@ body {
 
 /* Присоединяйтесь */
 .footer-icons {
-  margin-left: 70px;
+  margin-left: 0;
+  margin-bottom: 60px;
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
   .footer-icons {
-    margin-left: 0;
-    margin-bottom: 60px;
+    margin-bottom: 0;
   }
 }
-@media (max-width: 767px) {
+@media (min-width: 1200px) {
   .footer-icons {
-    margin-left: 0;
-    margin-bottom: 60px;
+    margin-right: 93px;
   }
 }
 
 .footer-icons__title {
   text-transform: uppercase;
   font-size: 14px;
-  line-height: 1.17;
-  color: #ffffff;
-  font-size: 14px;
   font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 0.03em;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  color: #ffffff;
   text-align: center;
 }
-@media (max-width: 480px) {
+@media (min-width: 1200px) {
   .footer-icons__title {
     font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-    text-align: center;
-  }
-}
-@media (max-width: 767px) {
-  .footer-icons__title {
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-align: center;
   }
 }
 
 .footer-icons__list {
-  margin-top: 20px;
-  list-style: none;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .footer-icons__item {
@@ -934,18 +870,14 @@ body {
 }
 
 /* Форма в футере */
-.footer-form {
-  width: 570px;
-  margin-left: 70px;
-}
-@media (max-width: 480px) {
+@media screen and (max-width: 1199px) {
   .footer-form {
-    margin-left: 0;
+    margin-top: 60px;
   }
 }
-@media (max-width: 767px) {
+@media screen and (min-width: 1200px) {
   .footer-form {
-    margin-left: 0;
+    max-width: 570px;
   }
 }
 
@@ -954,55 +886,23 @@ body {
   font-size: 14px;
   font-weight: 700;
   line-height: 1.14;
+  letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 20px;
 }
-@media (max-width: 480px) {
-  .footer-form__text {
-    text-align: center;
-  }
-}
-@media (max-width: 767px) {
-  .footer-form__text {
-    text-align: center;
-  }
-}
-@media (min-width: 767px) and (max-width: 1199px) {
-  .footer-form__text {
-    text-align: center;
-  }
-}
 
 .footer-form__conteiner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 20px;
 }
-@media (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .footer-form__conteiner {
-    display: block;
-    text-align: center;
+    display: flex;
+    align-items: center;
   }
-}
-@media (max-width: 767px) {
-  .footer-form__conteiner {
-    display: block;
-    text-align: center;
-  }
-}
-@media (min-width: 767px) and (max-width: 1199px) {
-  .footer-form__conteiner {
-    display: block;
-    text-align: center;
-  }
-}
-
-.footer-form__label {
-  margin-right: 12px;
 }
 
 .footer-form__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   outline: none;
   background-color: transparent;
@@ -1011,22 +911,19 @@ body {
   padding: 15px 0 15px 16px;
   color: rgba(255, 255, 255, 0.6);
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 1199px) {
   .footer-form__input {
-    width: 450px;
-    margin-bottom: 20px;
+    max-width: 450px;
   }
 }
-@media (max-width: 767px) {
+@media screen and (min-width: 480px) {
   .footer-form__input {
     width: 450px;
-    margin-bottom: 20px;
   }
 }
-@media (min-width: 767px) and (max-width: 1199px) {
+@media screen and (min-width: 1200px) {
   .footer-form__input {
-    width: 450px;
-    margin-bottom: 20px;
+    width: 358px;
   }
 }
 
@@ -1041,23 +938,15 @@ body {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
 }
-@media (max-width: 480px) {
+@media screen and (min-width: 1200px) {
   .btn-sign {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-@media (max-width: 767px) {
-  .btn-sign {
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
-@media (min-width: 767px) and (max-width: 1199px) {
-  .btn-sign {
-    margin-right: auto;
-    margin-left: auto;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 12px;
   }
 }
 
