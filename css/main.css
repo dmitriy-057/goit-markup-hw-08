@@ -122,6 +122,7 @@ body {
 /* Хедер */
 .header {
   background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
 }
 
 .header__conteiner {
@@ -539,6 +540,7 @@ body {
   background-color: #fff;
   border-radius: 4px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.1411764706), 0px 1px 3px 0px rgba(0, 0, 0, 0.1215686275);
 }
 @media screen and (min-width: 768px) {
   .own-card {
@@ -887,6 +889,11 @@ body {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-bottom: 20px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-form__text {
+    text-align: left;
+  }
 }
 
 .footer-form__conteiner {
@@ -1272,20 +1279,32 @@ body {
     margin-right: 30px;
     flex-basis: calc((100% - 30px) / 2);
   }
-  .portfolio__item:nth-child(2n) {
-    margin-right: 0px;
-  }
-  .portfolio__item:last-child {
-    margin-bottom: 0px;
-  }
 }
 @media (min-width: 1200px) {
   .portfolio__item {
     flex-basis: calc((100% - 60px) / 3);
   }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__item:nth-child(2n) {
+    margin-right: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__item:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1200px) {
   .portfolio__item:nth-child(3n) {
     margin-right: 0px;
   }
+}
+
+@media (min-width: 1200px) {
   .portfolio__item:nth-last-child(-n+3) {
     margin-bottom: 0px;
   }
