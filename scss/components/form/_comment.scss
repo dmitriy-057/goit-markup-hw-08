@@ -1,7 +1,7 @@
 /* Комментарий */
 .form-comment {
-  display: block;
   margin-bottom: 20px;
+  padding: 12px;
 }
 .form-comment__label {
   color: $secondary-color;
@@ -9,30 +9,17 @@
 }
 .form-comment__textarea {
   display: block;
+  width: 100%;
+  min-height: 120px;
   resize: none;
-  width: 448px;
-  height: 120px;
-  padding: 12px 16px;
+  padding: 12px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   outline: none;
   transition: outline 250ms $timing-formating;
-
-  @media (max-width: 480px) {
-    width: 370px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  @media (min-width: 481px) and (max-width: 767px) {
-    width: 370px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-  @media (min-width: 768px) and (maax-width: 1199px) {
-    width: 370px;
-    margin-right: auto;
-    margin-left: auto;
-  }
 
   &:not(:placeholder-shown) {
     border: 1px solid $hover-color;
