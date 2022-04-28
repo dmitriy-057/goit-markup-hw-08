@@ -72,7 +72,9 @@
   line-height: 1.2;
   text-transform: uppercase;
   margin-bottom: 10px;
-  text-align: center;
+  @include mq(mobile-only) {
+    text-align: center;
+  }
 }
 .particular__text {
   font-size: 14px;
