@@ -5,7 +5,8 @@
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 1200px) {
+  // @media screen and (min-width: 1200px)
+  @include mq(desktop) {
     padding-top: $main-padding;
     padding-bottom: $main-padding;
   }
@@ -15,14 +16,16 @@
   text-align: center;
   margin-bottom: 50px;
 
-  @media screen and (max-width: 1199px) {
+  // @media screen and (max-width: 1199px)
+  @include mq(notDesktop) {
     @include fonts($fs: 28px, $fw: 700, $lh: 1.17);
     margin-bottom: 30px;
   }
 }
 .team__list {
   display: block;
-  @media screen and (min-width: 768px) {
+  // @media screen and (min-width: 768px)
+  @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
   }
@@ -34,11 +37,13 @@
   transition: box-shadow 250ms $timing-formating;
   box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024,
     0px 1px 3px 0px #0000001f;
-  @media screen and (min-width: 768px) {
+  // @media screen and (min-width: 768px)
+  @include mq(tablet) {
     margin-right: 30px;
     flex-basis: calc((100% - 30px) / 2);
   }
-  @media (min-width: 1200px) {
+  // @media (min-width: 1200px)
+  @include mq(desktop) {
     margin-bottom: 0;
     margin-right: $main-li-margin;
     flex-basis: calc((100% - 3 * $main-li-margin) / 4);
@@ -46,7 +51,8 @@
 
   &:last-child {
     margin-bottom: 0;
-    @media (min-width: 1200px) {
+    // @media (min-width: 1200px)
+    @include mq(desktop) {
       margin-right: 0;
     }
   }
@@ -57,12 +63,14 @@
 }
 
 .own-card:nth-child(2n) {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  // @media screen and (min-width: 768px) and (max-width: 1199px)
+  @include mq(tablet-only) {
     margin-right: 0;
   }
 }
 .own-card:nth-child(n + 3) {
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  // @media screen and (min-width: 768px) and (max-width: 1199px)
+  @include mq(tablet-only) {
     margin-bottom: 0;
   }
 }
@@ -76,7 +84,8 @@
   @include fonts($fw: 400, $fs: 16px, $lh: 1.17);
   color: $secondary-color;
   text-align: center;
-  @media (min-width: 1200px) {
+  // @media (min-width: 1200px)
+  @include mq(desktop) {
     @include fonts($fw: 500, $fs: 16px, $lh: 1.17);
   }
 }
@@ -84,7 +93,7 @@
   padding-top: 16px;
   padding-bottom: 24px;
 
-  @media (min-width: 1200px) {
+  @include mq(desktop) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
