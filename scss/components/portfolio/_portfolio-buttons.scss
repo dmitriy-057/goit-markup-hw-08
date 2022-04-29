@@ -9,7 +9,14 @@
 }
 .portfolio__buttons-item {
   margin-bottom: 15px;
+  @include mq(desktop) {
+    margin-bottom: 0;
+  }
+  &:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
 }
+
 .portfolio__buttons-item:not(:last-child) {
   margin-right: 8px;
 }

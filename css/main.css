@@ -377,14 +377,6 @@ body {
 .particular__item {
   margin-bottom: 30px;
 }
-@media screen and (min-width: 1200px) {
-  .particular__item:last-child {
-    margin-right: 0;
-  }
-}
-.particular__item:nth-child(n+3) {
-  margin-bottom: 0;
-}
 @media screen and (min-width: 768px) {
   .particular__item {
     margin-right: 30px;
@@ -393,7 +385,16 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .particular__item {
+    margin-bottom: 0;
     flex-basis: calc((100% - 90px) / 4);
+  }
+}
+.particular__item:last-child {
+  margin-bottom: 0px;
+}
+@media screen and (min-width: 1200px) {
+  .particular__item:last-child {
+    margin-right: 0;
   }
 }
 
@@ -401,6 +402,10 @@ body {
   .particular__item:nth-child(2n) {
     margin-right: 0;
   }
+}
+
+.particular__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 .particular__title--visually-hidden {
@@ -766,23 +771,18 @@ body {
   .footer-conteiner {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-conteiner {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
 .address-conteiner {
   margin-bottom: 60px;
-}
-@media screen and (min-width: 768px) {
-  .address-conteiner {
-    margin-right: 165px;
-  }
 }
 @media screen and (max-width: 1199.98px) {
   .address-conteiner {
@@ -791,7 +791,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .address-conteiner {
-    margin-right: 70px;
     flex-grow: 1;
     margin-bottom: 0;
   }
@@ -1253,6 +1252,14 @@ body {
 .portfolio__buttons-item {
   margin-bottom: 15px;
 }
+@media screen and (min-width: 1200px) {
+  .portfolio__buttons-item {
+    margin-bottom: 0;
+  }
+}
+.portfolio__buttons-item:nth-last-child(-n+2) {
+  margin-bottom: 0;
+}
 
 .portfolio__buttons-item:not(:last-child) {
   margin-right: 8px;
@@ -1471,8 +1478,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  padding: 48px 0 48px 40px;
+  height: 100vh;
+  padding: 48px 0 15px 40px;
   overflow-y: scroll;
   transform: translateX(100%);
   visibility: hidden;
@@ -1544,6 +1551,7 @@ body {
 .mobile-socials__list {
   display: flex;
   flex-wrap: wrap;
+  vertical-align: bottom;
   margin-right: -10px;
   margin-bottom: -10px;
 }

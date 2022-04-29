@@ -10,26 +10,23 @@
   @include mq(tablet) {
     display: flex;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
   }
 
   @include mq(desktop) {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 }
 
 .address-conteiner {
   margin-bottom: 60px;
-  @include mq(tablet) {
-    margin-right: 165px;
-  }
   @include mq(notDesktop) {
     justify-content: center;
   }
 
   @include mq(desktop) {
-    margin-right: 70px;
+    // margin-right: 70px;
     flex-grow: 1;
     margin-bottom: 0;
   }
