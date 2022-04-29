@@ -32,16 +32,13 @@
   // @media screen and (max-width: 479px)
   @include mq(mobile-only) {
     width: 95%;
-    height: 95%;
   }
 
   // @media screen and (max-width: 1199px)
   @include mq(notDesktop) {
-    height: 95%;
     overflow-y: scroll;
   }
   @include mq(desktop) {
-    height: 95%;
     overflow-y: scroll;
     max-width: 528px;
   }
