@@ -1,6 +1,7 @@
 /* Форма в футере */
 .footer-form {
-  @media screen and (min-width: 1200px) {
+  // @media screen and (min-width: 1200px)
+  @include mq(desktop) {
     max-width: 570px;
   }
 }
@@ -10,35 +11,32 @@
   @include fonts($fw: 700, $lh: 1.14);
   color: #ffffff;
   margin-bottom: 20px;
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     text-align: left;
   }
 }
 .footer-form__conteiner {
   margin-top: 20px;
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     display: flex;
     align-items: center;
   }
 }
 .footer-form__input {
   width: 100%;
-  height: 50px;
   outline: none;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding: 15px 0 15px 16px;
   color: rgba(255, 255, 255, 0.6);
-  @media screen and (max-width: 1199px) {
-    max-width: 450px;
-  }
-
-  @media screen and (min-width: 480px) {
+  @include mq(mobile) {
     width: 450px;
   }
-
-  @media screen and (min-width: 1200px) {
+  @include mq(notDesktop) {
+    max-width: 450px;
+  }
+  @include mq(desktop) {
     width: 358px;
   }
 }
@@ -57,7 +55,7 @@
   margin-top: 20px;
   margin-right: auto;
   margin-left: auto;
-  @media screen and (min-width: 1200px) {
+  @include mq(desktop) {
     margin-top: 0;
     margin-right: 0;
     margin-left: 12px;

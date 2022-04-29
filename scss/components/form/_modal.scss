@@ -23,24 +23,27 @@
   position: relative;
   top: 50%;
   left: 50%;
+  max-width: 450px;
   background-color: #fff;
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $timing-formating;
 
-  @media screen and (max-width: 479px) {
+  // @media screen and (max-width: 479px)
+  @include mq(mobile-only) {
     width: 95%;
     height: 95%;
   }
 
-  @media screen and (min-width: 480px) {
-    width: 450px;
+  // @media screen and (max-width: 1199px)
+  @include mq(notDesktop) {
+    height: 95%;
+    overflow-y: scroll;
   }
-  @media screen and (max-width: 767px) {
-    overflow-x: scroll;
-  }
-  @media screen and (min-width: 1200px) {
-    width: 528px;
+  @include mq(desktop) {
+    height: 95%;
+    overflow-y: scroll;
+    max-width: 528px;
   }
 }
 .modal__btn-close {

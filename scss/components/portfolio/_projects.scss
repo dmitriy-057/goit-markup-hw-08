@@ -3,41 +3,43 @@
   display: flex;
   flex-wrap: wrap;
   margin-top: 50px;
-  @media (max-width: 767px) {
+  //  @media (max-width: 767px)
+  @include mq(mobile-only) {
     justify-content: center;
   }
-  @media (min-width: 768px) {
+  // @media (min-width: 768px)
+  @include mq(tablet) {
     align-items: stretch;
   }
 }
 .portfolio__item {
   margin-bottom: $main-li-margin;
 
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     margin-right: $main-li-margin;
     flex-basis: calc((100% - $main-li-margin) / 2);
   }
-  @media (min-width: 1200px) {
+  @include mq(desktop) {
     flex-basis: calc((100% - 2 * $main-li-margin) / 3);
   }
 }
 .portfolio__item:nth-child(2n) {
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @include mq(tablet-only) {
     margin-right: 0px;
   }
 }
 .portfolio__item:last-child {
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @include mq(tablet-only) {
     margin-bottom: 0px;
   }
 }
 .portfolio__item:nth-child(3n) {
-  @media (min-width: 1200px) {
+  @include mq(desktop) {
     margin-right: 0px;
   }
 }
 .portfolio__item:nth-last-child(-n + 3) {
-  @media (min-width: 1200px) {
+  @include mq(desktop) {
     margin-bottom: 0px;
   }
 }
@@ -61,7 +63,7 @@
     box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f,
       0px 1px 1px 0px #0000001f;
   }
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -76,7 +78,7 @@
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-radius: 1px;
-  @media (min-width: 768px) {
+  @include mq(tablet) {
     flex-grow: 1;
   }
 }
