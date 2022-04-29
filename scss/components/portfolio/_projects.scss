@@ -29,7 +29,7 @@
   }
 }
 .portfolio__item:last-child {
-  @include mq(tablet-only) {
+  @include mq(notDesktop) {
     margin-bottom: 0px;
   }
 }

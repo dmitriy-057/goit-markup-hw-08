@@ -31,6 +31,7 @@
   @include mq(desktop) {
     margin-right: 70px;
     flex-grow: 1;
+    margin-bottom: 0;
   }
 }
 .logo__link {
