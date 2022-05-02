@@ -10,7 +10,7 @@
 .form-comment__textarea {
   display: block;
   width: 100%;
-  min-height: 120px;
+  // min-height: 120px;
   resize: none;
   padding: 12px;
   font-size: 14px;
@@ -20,6 +20,9 @@
   border-radius: 4px;
   outline: none;
   transition: outline 250ms $timing-formating;
+  @include mq(notDesktop) {
+    max-height: 100px;
+  }
 
   &:not(:placeholder-shown) {
     border: 1px solid $hover-color;

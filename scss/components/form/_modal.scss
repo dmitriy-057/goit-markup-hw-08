@@ -23,25 +23,25 @@
   position: relative;
   top: 50%;
   left: 50%;
-  // max-width: 450px;
+  padding: 40px;
   background-color: #fff;
   border-radius: 4px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $timing-formating;
 
-  // @media screen and (max-width: 479px)
   @include mq(mobile-only) {
+    overflow-y: scroll;
     width: 95%;
-    height: 609px;
+    height: 95%;
   }
 
   @include mq(notDesktop) {
+    max-width: 450px;
+    height: 609px;
     overflow-y: scroll;
   }
   @include mq(desktop) {
-    overflow-y: scroll;
     max-width: 528px;
-    height: 581px;
   }
 }
 .modal__btn-close {

@@ -1,8 +1,8 @@
 /* Форма ввода */
-.form {
-  padding: 40px;
-  outline: 2px solid #000;
-}
+// .form {
+//   padding: 40px;
+//   outline: 2px solid #000;
+// }
 .form__text {
   font-family: inherit;
   font-size: 20px;
@@ -28,7 +28,7 @@
   background-color: $hover-color;
   color: #fff;
   width: 200px;
-  // height: 50px;
+  height: 50px;
   padding: 10px 55px;
   border: 0;
   border-radius: 4px;
